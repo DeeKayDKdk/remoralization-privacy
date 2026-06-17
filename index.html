@@ -247,55 +247,18 @@
       font-weight: 600;
       margin-bottom: 16px;
     }
-    .privacy-toggle {
-      background: none;
-      border: none;
-      color: var(--text-dim);
+    .footer-privacy {
+      display: block;
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      cursor: pointer;
-      font-family: inherit;
+      color: var(--text-dim);
+      text-decoration: none;
       padding: 8px 12px;
       transition: color 0.15s ease;
     }
-    .privacy-toggle:hover { color: var(--gold); }
-    .privacy-content {
-      max-width: 640px;
-      margin: 32px auto 0;
-      text-align: left;
-      display: none;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
-    }
-    .privacy-content.open { display: block; }
-    .privacy-content h3 {
-      font-size: 14px;
-      font-weight: 800;
-      color: var(--text);
-      margin: 24px 0 8px;
-      letter-spacing: -0.01em;
-    }
-    .privacy-content p, .privacy-content li {
-      font-size: 13px;
-      color: var(--text-dim);
-      line-height: 1.7;
-    }
-    .privacy-content ul {
-      padding-left: 18px;
-      margin-bottom: 12px;
-    }
-    .privacy-content .privacy-date {
-      font-size: 11px;
-      color: var(--text-muted);
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-    .privacy-content a { color: var(--gold); text-decoration: none; }
-    .privacy-content a:hover { text-decoration: underline; }
+    .footer-privacy:hover { color: var(--gold); }
     @media (min-width: 720px) {
       .pillars { grid-template-columns: 1fr 1fr; }
     }
@@ -370,31 +333,7 @@
   </section>
   <footer>
     <div class="footer-meta">&copy; 2026 Remoralization &middot; <a href="mailto:dylankundert@gmail.com" style="color: var(--text-dim); text-decoration: none;">dylankundert@gmail.com</a></div>
-    <button class="privacy-toggle" onclick="document.getElementById('privacy').classList.toggle('open'); this.textContent = document.getElementById('privacy').classList.contains('open') ? 'Hide privacy policy' : 'Privacy policy';">Privacy policy</button>
-    <div class="privacy-content" id="privacy">
-      <p class="privacy-date">Last updated April 27, 2026</p>
-      <h3>Overview</h3>
-      <p>Remoralization is committed to protecting your privacy. This policy explains what data we collect and how we use it.</p>
-      <h3>Data We Collect</h3>
-      <ul>
-        <li>Account information: email address used to create your account</li>
-        <li>Health data: body measurements, waist measurements, and run data you manually enter</li>
-        <li>Photos: condition check-in photos and house spot photos you take within the app</li>
-        <li>Usage data: your ratings, goals, reflections, and progress entries</li>
-      </ul>
-      <h3>How We Use Your Data</h3>
-      <ul>
-        <li>To provide the app's features and track your progress across the four pillars</li>
-        <li>To generate personalized feedback from the archetype system</li>
-        <li>Your data is never sold to third parties</li>
-      </ul>
-      <h3>Data Storage</h3>
-      <p>Your data is stored securely using Supabase. Photos are stored in Supabase Storage.</p>
-      <h3>AI Features</h3>
-      <p>The app uses Anthropic's Claude API to generate archetype responses. Your pillar data is sent to this API to generate responses. No personally identifiable information is included.</p>
-      <h3>Your Rights</h3>
-      <p>You can delete your account and all associated data by contacting us at <a href="mailto:dylankundert@gmail.com">dylankundert@gmail.com</a>.</p>
-    </div>
+    <a href="privacy.html" class="footer-privacy">Privacy policy</a>
   </footer>
 </body>
 </html>
